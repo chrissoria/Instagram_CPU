@@ -1,0 +1,6 @@
+framework module Pods_Instagram_CPU {
+  umbrella header "Pods-Instagram_CPU-umbrella.h"
+
+  export *
+  module * { export * }
+}
