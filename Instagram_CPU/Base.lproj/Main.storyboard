@@ -60,11 +60,77 @@
                     <connections>
                         <outlet property="passwordField" destination="XPe-zX-khx" id="BEU-xb-09h"/>
                         <outlet property="userNameField" destination="QPd-7O-cPJ" id="ItT-L3-Rao"/>
+                        <segue destination="fDI-F5-oDS" kind="modal" identifier="loginSegue" id="zLO-OA-QvH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162" y="366"/>
+        </scene>
+        <!--Instagram-->
+        <scene sceneID="cT9-fR-a2r">
+            <objects>
+                <viewController id="cd4-Eb-6mk" customClass="InstagramViewController" customModule="Instagram_CPU" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gaY-lT-mwx"/>
+                        <viewControllerLayoutGuide type="bottom" id="7EJ-Cg-kHA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5al-Zw-NtC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Instagram" id="hxA-PK-uCs">
+                        <barButtonItem key="rightBarButtonItem" title="logout" id="vYq-yP-CNA">
+                            <connections>
+                                <action selector="onLogout:" destination="cd4-Eb-6mk" id="m2P-kV-hgh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="logoutBarButton" destination="vYq-yP-CNA" id="4hv-4A-msF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thT-pz-btg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2145" y="366"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ygc-b3-PXF">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fDI-F5-oDS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="DMO-Ek-ueu"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="0lN-VD-ZM3">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jJZ-sF-auR" kind="relationship" relationship="viewControllers" id="Dhk-E2-FCd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYS-de-Cdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="366"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="svv-Sz-4KB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jJZ-sF-auR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="VId-vX-YKD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EI4-wi-RyE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cd4-Eb-6mk" kind="relationship" relationship="rootViewController" id="SOL-Jt-Jql"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2M-Di-4Cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="366"/>
         </scene>
     </scenes>
 </document>

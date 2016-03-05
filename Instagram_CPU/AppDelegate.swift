@@ -13,6 +13,7 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
     
 
 
@@ -24,8 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.clientKey = "Reznor831"
                 configuration.server = "https://ancient-cliffs-78589.herokuapp.com/parse"
             })
+        
+        
         )
+        
+
+        
+        
+            
         return true
+        
+        
+        
+    
+    
     }
 
     func applicationWillResignActive(application: UIApplication) {
