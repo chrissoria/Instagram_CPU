@@ -70,7 +70,7 @@
         <!--Instagram-->
         <scene sceneID="cT9-fR-a2r">
             <objects>
-                <viewController id="cd4-Eb-6mk" customClass="InstagramViewController" customModule="Instagram_CPU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InstagramViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cd4-Eb-6mk" customClass="InstagramViewController" customModule="Instagram_CPU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gaY-lT-mwx"/>
                         <viewControllerLayoutGuide type="bottom" id="7EJ-Cg-kHA"/>

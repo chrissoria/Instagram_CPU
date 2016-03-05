@@ -29,16 +29,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         )
         
-
-        
-        
+        //if user is logged in
+        if PFUser.currentUser() != nil {
+            
+            //skip login and jump to the instagramViewController
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier ("InstagramViewController")
+            window?.rootViewController = viewController
+        }
             
         return true
         
         
-        
-    
-    
     }
 
     func applicationWillResignActive(application: UIApplication) {
