@@ -9,12 +9,16 @@
 import UIKit
 import Parse
 
-class InstagramViewController: UIViewController {
+class InstagramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var logoutBarButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -24,6 +28,21 @@ class InstagramViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("PhotoCell", forIndexPath: indexPath)
+        cell.textLabel!.text = "row\(indexPath.row)"
+        print("row\(indexPath.row)")
+        
+        
+        return cell
+    }
+    
     @IBAction func onLogout(sender: AnyObject) {
         PFUser.logOut()
         
@@ -31,6 +50,10 @@ class InstagramViewController: UIViewController {
         print("bye!")
     
     }
+    
+    
+    
+
 
 
     // MARK: - Navigation

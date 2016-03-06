@@ -33,13 +33,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if PFUser.currentUser() != nil {
             
             //skip login and jump to the instagramViewController
-            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier ("InstagramViewController")
+
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier ("TabBarViewController")
             window?.rootViewController = viewController
+            
         }
             
         return true
         
         
+    }
+    
+    func switchToSearchTab() {
+        var loginVc = self.window!.rootViewController as! LoginViewController;
+        loginVc.performSegueWithIdentifier("loginSegue", sender: loginVc);
+        
+        if self.window!.rootViewController as? UITabBarController != nil {
+            let tababarController = self.window!.rootViewController as! UITabBarController;
+            tababarController.selectedIndex = 1
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
