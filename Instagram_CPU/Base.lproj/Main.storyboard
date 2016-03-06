@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="1335" y="302"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="SaX-DY-Jvl">
             <objects>
-                <viewController id="8X0-qd-zJa" sceneMemberID="viewController">
+                <viewController id="8X0-qd-zJa" customClass="SettingsViewController" customModule="Instagram_CPU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U1k-el-1yr"/>
                         <viewControllerLayoutGuide type="bottom" id="GGi-lp-d2k"/>
@@ -181,9 +181,22 @@
                     <view key="view" contentMode="scaleToFill" id="87m-fx-QJo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x9-KX-SvB">
+                                <rect key="frame" x="123" y="235" width="75" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Logout!"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="8X0-qd-zJa" eventType="touchUpInside" id="Rlh-Pl-c0P"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="AwS-AF-x3P"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="4x9-KX-SvB" id="VZH-wA-M7C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDH-UF-g9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
