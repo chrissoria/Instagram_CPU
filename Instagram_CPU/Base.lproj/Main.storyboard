@@ -145,14 +145,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW8-R1-Mc6">
-                                <rect key="frame" x="20" y="227" width="116" height="102.5"/>
+                                <rect key="frame" x="20" y="227" width="116" height="110"/>
                                 <state key="normal" title="Compose" image="camera"/>
                                 <connections>
                                     <action selector="onCompose:" destination="PHi-iF-XwJ" eventType="touchUpInside" id="4rW-WG-EJ1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWq-8Y-RHQ">
-                                <rect key="frame" x="190" y="237" width="110" height="93"/>
+                                <rect key="frame" x="190" y="237" width="110" height="100"/>
                                 <state key="normal" title="Post" image="library"/>
                                 <connections>
                                     <action selector="onPost:" destination="PHi-iF-XwJ" eventType="touchUpInside" id="7uG-UN-pFB"/>

@@ -66,6 +66,8 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func onSubmit(sender: AnyObject) {
+        let newImage = resize(captureImageView.image!, newSize: CGSize(width: 300, height: 500))
+        
         Post.postUserImage(captureImageView.image, withCaption: captionTextField.text) { (success: Bool, error: NSError?) -> Void in
             
             if success {
@@ -78,6 +80,21 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
         }
     }
+    
+    func resize(image: UIImage, newSize: CGSize) -> UIImage {
+        let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
+        resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        resizeImageView.image = image
+        
+        UIGraphicsBeginImageContext(resizeImageView.frame.size)
+        resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        print("resized")
+        return newImage
+        
+    }
+
     
     
     /*
