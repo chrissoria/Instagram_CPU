@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import ParseUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -45,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func switchToSearchTab() {
-        var loginVc = self.window!.rootViewController as! LoginViewController;
+        let loginVc = self.window!.rootViewController as! LoginViewController;
         loginVc.performSegueWithIdentifier("loginSegue", sender: loginVc);
         
         if self.window!.rootViewController as? UITabBarController != nil {

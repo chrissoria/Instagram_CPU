@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Instagram_CPU' do
     pod 'Parse'
+    pod 'ParseUI'
 
 end
 
