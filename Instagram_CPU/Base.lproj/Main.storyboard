@@ -79,29 +79,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="377" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GU1-m0-R8F">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="306" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GU1-m0-R8F">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhotoTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="377" id="fLt-4t-MiP" customClass="PhotoTableViewCell" customModule="Instagram_CPU" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="377"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhotoTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="306" id="fLt-4t-MiP" customClass="PhotoTableViewCell" customModule="Instagram_CPU" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="306"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fLt-4t-MiP" id="bZF-1c-Y2x">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="376.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="305.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOm-fR-7EB" customClass="PFImageView">
-                                                    <rect key="frame" x="13" y="8" width="299" height="234"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hue-vK-jKr">
-                                                    <rect key="frame" x="132" y="257" width="60" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hue-vK-jKr">
+                                                    <rect key="frame" x="8" y="257" width="304" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOm-fR-7EB" customClass="PFImageView">
+                                                    <rect key="frame" x="8" y="8" width="304" height="234"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="304" id="NyZ-co-dgW"/>
+                                                        <constraint firstAttribute="height" constant="234" id="zzW-aa-cmw"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZOm-fR-7EB" firstAttribute="leading" secondItem="bZF-1c-Y2x" secondAttribute="leading" constant="8" id="2IJ-Fo-lJg"/>
+                                                <constraint firstItem="ZOm-fR-7EB" firstAttribute="top" secondItem="bZF-1c-Y2x" secondAttribute="top" constant="8" id="63a-VY-1cl"/>
+                                                <constraint firstItem="hue-vK-jKr" firstAttribute="leading" secondItem="bZF-1c-Y2x" secondAttribute="leading" constant="8" id="SIl-wF-juI"/>
+                                                <constraint firstItem="hue-vK-jKr" firstAttribute="top" secondItem="ZOm-fR-7EB" secondAttribute="bottom" constant="15" id="T5m-bC-jl2"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hue-vK-jKr" secondAttribute="bottom" constant="28" id="VQ0-yN-CzI"/>
+                                                <constraint firstItem="hue-vK-jKr" firstAttribute="top" secondItem="ZOm-fR-7EB" secondAttribute="bottom" constant="15" id="Xfk-Pf-Vfw"/>
+                                                <constraint firstAttribute="trailing" secondItem="hue-vK-jKr" secondAttribute="trailing" constant="8" id="aeI-8I-wFq"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZOm-fR-7EB" secondAttribute="trailing" constant="8" id="f5e-AM-PAR"/>
+                                                <constraint firstItem="hue-vK-jKr" firstAttribute="centerX" secondItem="ZOm-fR-7EB" secondAttribute="centerX" id="rzf-io-4n3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" identifier="PhotoTableViewCell"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="PhotoCell"/>
                                         <connections>
                                             <outlet property="captionLabel" destination="hue-vK-jKr" id="12w-MQ-znl"/>
                                             <outlet property="photoView" destination="ZOm-fR-7EB" id="ALn-2A-1xv"/>
@@ -111,6 +126,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GU1-m0-R8F" firstAttribute="top" secondItem="5al-Zw-NtC" secondAttribute="top" id="4Wc-wq-NOU"/>
+                            <constraint firstItem="GU1-m0-R8F" firstAttribute="leading" secondItem="5al-Zw-NtC" secondAttribute="leading" id="Dhs-aj-9Ld"/>
+                            <constraint firstAttribute="bottom" secondItem="GU1-m0-R8F" secondAttribute="bottom" id="UaG-Sg-oZV"/>
+                            <constraint firstAttribute="trailing" secondItem="GU1-m0-R8F" secondAttribute="trailing" id="pcf-Vu-s7T"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Instagram" id="hxA-PK-uCs">
                         <barButtonItem key="rightBarButtonItem" title="logout" id="vYq-yP-CNA">
