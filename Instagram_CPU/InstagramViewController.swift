@@ -9,16 +9,23 @@
 import UIKit
 import Parse
 import ParseUI
+import AFNetworking
 
 class InstagramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var logoutBarButton: UIBarButtonItem!
     
+    var refreshControl = UIRefreshControl()
+    
     var photos: [PFObject]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
+        
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -85,7 +92,28 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
             }
         }
     }
-    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        let session = NSURLSession(
+            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
+            delegate:nil,
+            delegateQueue:NSOperationQueue.mainQueue()
+        )
+        let request = NSURLRequest()
+        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request,
+            completionHandler: { (data, response, error) in
+                
+                // ... Use the new data to update the data source ...
+                
+                // Reload the tableView now that there is new data
+                self.tableView.reloadData()
+                print("reloading")
+                
+                // Tell the refreshControl to stop spinning
+                refreshControl.endRefreshing()
+        });
+        task.resume()
+        
+    }
     
 
 

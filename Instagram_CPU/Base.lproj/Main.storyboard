@@ -226,11 +226,11 @@
             </objects>
             <point key="canvasLocation" x="1867" y="-317"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="svv-Sz-4KB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jJZ-sF-auR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="VId-vX-YKD"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="VId-vX-YKD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EI4-wi-RyE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -277,11 +277,11 @@
             </objects>
             <point key="canvasLocation" x="1867" y="925"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="4a5-LT-MKh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vtj-Ux-yoY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9Tp-sn-hkX"/>
+                    <tabBarItem key="tabBarItem" title="" image="camera" id="9Tp-sn-hkX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NiM-WS-oQi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -296,11 +296,11 @@
             </objects>
             <point key="canvasLocation" x="1335" y="-317"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="njj-eh-2EV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jzZ-fZ-RMH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9sE-ox-ETq"/>
+                    <tabBarItem key="tabBarItem" title="" image="settings" id="9sE-ox-ETq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KPv-Ov-8NB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -318,6 +318,8 @@
     </scenes>
     <resources>
         <image name="camera" width="128" height="128"/>
+        <image name="home" width="30" height="30"/>
         <image name="library" width="128" height="128"/>
+        <image name="settings" width="30" height="30"/>
     </resources>
 </document>

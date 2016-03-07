@@ -75,6 +75,9 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
                 print("Successful Post to Parse")
                 self.captureImageView.image = nil
                 self.captionTextField.text = ""
+                self.view.window?.endEditing(true)
+                
+
             }
             else {
                 print("Can't post to parse")
